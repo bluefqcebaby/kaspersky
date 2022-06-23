@@ -1,0 +1,57 @@
+@use "../../variables";
+
+.box {
+  margin: 1.5rem;
+  height: 100%;
+  opacity: 0;
+  animation-name: anim;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.title {
+  margin-top: 4rem;
+  font-weight: 800;
+  line-height: 3rem;
+}
+
+.btn {
+  background: variables.$primary;
+  color: white;
+  display: block;
+  width: calc(100% - 3rem);
+  bottom: 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+  font-size: 17px;
+  font-weight: 500;
+  position: absolute;
+  &:disabled {
+    background: lighten(variables.$gray, 20%);
+  }
+}
+
+@keyframes anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.feature {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.text_title {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+  font-size: 1.2rem;
+}
+.file {
+  margin-top: -1rem;
+}

@@ -1,0 +1,27 @@
+@use "../../variables";
+
+.box {
+  width: 100%;
+  min-height: 100vh;
+  background: -webkit-linear-gradient(
+    225deg,
+    variables.$light-green,
+    variables.$dark-green
+  );
+  background: -moz-linear-gradient(225deg, variables.$light-green, variables.$dark-green);
+  background: linear-gradient(225deg, variables.$light-green, variables.$dark-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.img {
+  width: 125px;
+}
+
+.text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 0.6rem;
+}

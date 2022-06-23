@@ -1,0 +1,123 @@
+@use "../../variables";
+.checkInput {
+  display: none;
+  &:checked ~ .checkInput_style {
+    background: variables.$primary;
+    border-color: variables.$primary;
+  }
+}
+
+.checkInput_style {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: block;
+  border: 0.15rem solid variables.$gray;
+  border-radius: 0.3rem;
+  margin-top: 0.1rem;
+  position: relative;
+  transition: 0.05s background;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../img/check.svg");
+    background-position: center;
+    background-size: contain;
+  }
+}
+.term {
+  display: flex;
+  margin-top: 1.1rem;
+  gap: 2rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.term_box {
+  position: relative;
+  & + & {
+    margin-top: 2.5rem;
+  }
+}
+
+.arrow {
+  height: 15px;
+  object-fit: contain;
+}
+
+.link {
+  position: absolute;
+  right: 0;
+  top: 2px;
+}
+
+.box {
+  margin: 1rem;
+  height: 100%;
+  opacity: 0;
+  animation-name: anim;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+.text_box {
+  max-width: 80%;
+}
+
+.text_mini {
+  font-size: 0.9rem;
+  color: variables.$gray;
+}
+
+.text {
+  color: darken(variables.$gray, 10%);
+}
+
+.title {
+  margin-top: 4rem;
+  font-weight: 800;
+}
+
+.term_text {
+  max-width: 80%;
+  line-height: 1.4rem;
+  font-weight: 500;
+}
+
+.break {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  background: variables.$primary;
+  color: white;
+  display: block;
+  width: calc(100% - 2rem);
+  bottom: 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+  font-size: 17px;
+  font-weight: 500;
+  position: absolute;
+  &:disabled {
+    background: lighten(variables.$gray, 20%);
+  }
+}
+
+@keyframes anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal_box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
