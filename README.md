@@ -1,2 +1,2 @@
 # kaspersky app
-simple copy first 4 pages😴
+simple copy of first 4 pages😴
